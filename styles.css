@@ -1,13 +1,15 @@
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #f4f4f4;
+    background-color: #f0f0f0;
     color: #333;
+    line-height: 1.6;
 }
 
+/* Header Styles */
 .header {
     background: #333;
     color: #fff;
@@ -16,12 +18,18 @@ body {
     position: sticky;
     top: 0;
     z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .header .logo {
     font-size: 1.5rem;
     text-decoration: none;
     color: #fff;
+    transition: color 0.3s;
+}
+
+.header .logo:hover {
+    color: #ff6347;
 }
 
 .navbar {
@@ -35,25 +43,28 @@ body {
     color: #fff;
     text-decoration: none;
     padding: 0.5rem 1rem;
-    transition: background 0.3s;
+    transition: background 0.3s, color 0.3s;
 }
 
 .navbar a:hover {
     background: #555;
     border-radius: 5px;
+    color: #ff6347;
 }
 
 .navbar a.active {
     background: #777;
     border-radius: 5px;
+    color: #ff6347;
 }
 
-/* Home Section */
+/* Home Section Styles */
 .home {
     text-align: center;
     padding: 4rem 2rem;
     background: url('background.jpg') no-repeat center center/cover;
     color: #fff;
+    animation: fadeIn 2s ease-in-out;
 }
 
 .home-content {
@@ -62,7 +73,7 @@ body {
     background: rgba(0, 0, 0, 0.7);
     padding: 2rem;
     border-radius: 10px;
-    animation: fadeIn 2s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .home-img img {
@@ -70,6 +81,7 @@ body {
     width: 150px;
     height: 150px;
     margin-bottom: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .home-text h1 {
@@ -104,17 +116,20 @@ body {
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
-    transition: background 0.3s;
+    transition: background 0.3s, transform 0.3s;
 }
 
 .btn:hover {
     background: #e5553e;
+    transform: scale(1.05);
 }
 
-/* About Section */
+/* About Section Styles */
 .about {
     padding: 4rem 2rem;
     text-align: center;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .about-content {
@@ -131,17 +146,18 @@ body {
     border-radius: 50%;
     width: 150px;
     height: 150px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .about-text p {
     font-size: 1.2rem;
-    line-height: 1.6;
 }
 
-/* Education Section */
+/* Education Section Styles */
 .education {
     padding: 4rem 2rem;
-    background: #fff;
+    background: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .timeline {
@@ -199,7 +215,12 @@ body {
     background: #fff;
     position: relative;
     border-radius: 6px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.timeline .content:hover {
+    transform: scale(1.05);
 }
 
 .timeline .content .tag {
@@ -215,10 +236,11 @@ body {
     border-radius: 0 0 6px 6px;
 }
 
-/* Skills Section */
+/* Skills Section Styles */
 .skills {
     padding: 4rem 2rem;
     background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .skills .container {
@@ -235,11 +257,17 @@ body {
     text-align: center;
     flex: 1;
     min-width: 150px;
-    transition: transform 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .skills .bar:hover {
     transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .skills .bar .info img {
@@ -253,10 +281,11 @@ body {
     color: #333;
 }
 
-/* Experience Section */
+/* Experience Section Styles */
 .experience {
     padding: 4rem 2rem;
-    background: #f4f4f4;
+    background: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .experience-container {
@@ -269,12 +298,13 @@ body {
     padding: 2rem;
     margin-bottom: 2rem;
     border-radius: 6px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .experience-box:hover {
     transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .experience-box h4 {
@@ -286,10 +316,11 @@ body {
     margin-bottom: 1rem;
 }
 
-/* Extra-Curricular Section */
+/* Extra-Curricular Section Styles */
 .extra-curricular {
     padding: 4rem 2rem;
     background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .extra-curricular-container {
@@ -302,24 +333,26 @@ body {
     padding: 2rem;
     margin-bottom: 2rem;
     border-radius: 6px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .extra-curricular-box:hover {
     transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .extra-curricular-box h4 {
     margin-bottom: 0.5rem;
 }
 
-/* Contact Section */
+/* Contact Section Styles */
 .contact {
     padding: 4rem 2rem;
     background: #333;
     color: #fff;
     text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .contact .container {
@@ -349,12 +382,17 @@ body {
     color: #ff6347;
 }
 
-.contact-form form {
-    display: flex;
+.contact-form {
+    display: none;
     flex-direction: column;
     gap: 1rem;
     width: 100%;
     max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .contact-form .form-group {
@@ -364,22 +402,24 @@ body {
 
 .contact-form label {
     margin-bottom: 0.5rem;
+    color: #333;
 }
 
 .contact-form input,
 .contact-form textarea {
     padding: 1rem;
-    border: 1px solid #fff;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    background: #444;
-    color: #fff;
-    transition: border 0.3s;
+    background: #f9f9f9;
+    color: #333;
+    transition: border 0.3s, box-shadow 0.3s;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
     border: 1px solid #ff6347;
     outline: none;
+    box-shadow: 0 0 8px rgba(255, 99, 71, 0.5);
 }
 
 .contact-form button {
@@ -389,21 +429,16 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: background 0.3s, transform 0.3s;
 }
 
 .contact-form button:hover {
     background: #e5553e;
+    transform: scale(1.05);
 }
 
 /* Animations */
 @keyframes fadeIn {
     from {
         opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+        transform: tran
